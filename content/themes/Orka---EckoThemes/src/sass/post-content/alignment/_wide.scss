@@ -1,0 +1,29 @@
+/**
+ *   Content - Alignment - Wide
+ */
+
+.kg-width-wide {
+    position: relative;
+    width: 115%;
+    max-width: 115%;
+    margin-right: 15%;
+    margin-top: $content_spacing_large;
+    margin-bottom: $content_spacing_large;
+
+    @media screen and (max-width: 1720px) {
+        width: 107.5%;
+        max-width: 107.5%;
+        margin-right: 7.5%;
+    }
+
+
+    @media screen and (max-width: 1580px) {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    @media screen and (max-width: 680px) {
+        margin-top: $content_spacing_medium;
+        margin-bottom: $content_spacing_medium;
+    }
+}

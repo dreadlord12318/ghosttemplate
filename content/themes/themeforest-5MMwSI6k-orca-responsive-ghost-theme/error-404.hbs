@@ -1,0 +1,22 @@
+{{! Template: Error - 404 }}
+{{!< default}}
+
+{{> "header" class="header--has-title"}}
+
+<div class="page page--middle page--full-height page--narrow page--padded-slim">
+
+    <div class="page__inner">
+
+        <section class="error-stack">
+            <p class="error-stack__status-code">{{statusCode}}</p>
+            <h2 class="error-stack__header">{{message}}</h2>
+            <p class="error-stack__description">{{t "The page you were looking for cannot be found, it may have been moved or no longer exists. Navigate back to the homepage by clicking below."}}</p>
+            <a href="{{@site.url}}" class="error-stack__button button button--icon-left">
+                {{> "svg-icon" icon="home" style="stroke" class="button__svg-icon"}}
+                <span class="button__label">{{t "Homepage"}}</span>
+            </a>
+        </section>
+
+    </div>
+
+</div>

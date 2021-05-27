@@ -1,0 +1,48 @@
+/*------------------------------------------------------------------
+    Components: Blog Info
+-------------------------------------------------------------------*/
+
+.blog-info {
+    $self: &;
+
+    &--light {
+        #{ $self }__title,
+        #{ $self }__description {
+            color: #F4F6F8;
+        }
+
+        #{ $self }__light {
+            opacity: 0.8;
+        }
+    }
+
+    &--large{
+        #{ $self }__title {
+            font-size: pxtorem(52);
+            line-height: pxtorem(64);
+        }
+
+        #{ $self }__description {
+            font-size: pxtorem(23);
+            line-height: pxtorem(42);
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin: 0 0 pxtorem(50);
+    }
+
+    &__title {
+        font-size: pxtorem(40);
+        line-height: pxtorem(50);
+        margin: 0 0 pxtorem(30);
+    }
+
+    &__description {
+        max-width: pxtorem(720);
+        margin: 0;
+        font-size: pxtorem(20);
+        line-height: pxtorem(40);
+    }
+}

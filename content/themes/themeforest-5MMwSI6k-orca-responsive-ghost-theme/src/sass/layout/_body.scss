@@ -1,0 +1,19 @@
+/*------------------------------------------------------------------
+    Layout: Body
+-------------------------------------------------------------------*/
+
+.body {
+    display: grid;
+    grid-template-areas: 'notification'
+    'container';
+    grid-template-rows: auto 100%;
+    max-width: 100vw;
+
+    .notification {
+        grid-area: notification;
+    }
+
+    .container {
+        grid-area: container;
+    }
+}

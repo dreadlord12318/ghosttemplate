@@ -1,0 +1,8 @@
+/*------------------------------------------------------------------
+    Base: Transition
+-------------------------------------------------------------------*/
+
+.transition {
+    transition: all 200ms ease-out;
+    transition-property: text-decoration, color, background-color, border-color, transform, opacity;
+}

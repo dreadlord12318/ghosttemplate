@@ -1,0 +1,12 @@
+/**
+ *   Content - Element - Block - Paragraph
+ */
+
+p {
+    font-family: $font_body;
+    font-size: $content_font_size_base;
+    font-weight: 300;
+    margin: $content_spacing_base 0;
+    letter-spacing: pxtorem(0.15);
+    color: #5F6266;
+}

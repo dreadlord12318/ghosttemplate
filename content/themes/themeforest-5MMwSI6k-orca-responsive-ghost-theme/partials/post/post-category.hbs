@@ -1,0 +1,7 @@
+{{! Partial: Post - Tag }}
+
+{{#if primary_tag}}
+    <section class="post-category {{#if class}}{{class}}{{/if}}">
+        <a href="{{primary_tag.url}}" class="post-category__anchor">{{primary_tag.name}}</a>
+    </section>
+{{/if}}

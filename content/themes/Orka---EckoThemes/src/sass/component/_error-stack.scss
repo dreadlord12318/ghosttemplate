@@ -1,0 +1,33 @@
+/*------------------------------------------------------------------
+    Components: Error
+-------------------------------------------------------------------*/
+
+.error-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__status-code {
+        font-family: $font_header;
+        font-size: pxtorem(55);
+        font-weight: 700;
+        line-height: normal;
+        margin: 0 0 pxtorem(35);
+        color: #0c0c0c;
+    }
+
+    &__header {
+        font-family: $font_body;
+        font-size: pxtorem(24);
+        font-weight: 500;
+        line-height: normal;
+        margin: 0 0 pxtorem(50);
+        text-transform: capitalize;
+        color: #919395;
+    }
+
+    &__description {
+        margin: 0 0 pxtorem(65);
+    }
+}

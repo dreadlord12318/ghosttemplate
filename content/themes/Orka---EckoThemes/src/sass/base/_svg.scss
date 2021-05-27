@@ -1,0 +1,26 @@
+/*------------------------------------------------------------------
+    Base: SVG
+-------------------------------------------------------------------*/
+
+.svg-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+
+    use {
+        pointer-events: none;
+    }
+
+    &--stroke {
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+    }
+
+    &--fill {
+        fill: currentColor;
+        stroke: none;
+    }
+}

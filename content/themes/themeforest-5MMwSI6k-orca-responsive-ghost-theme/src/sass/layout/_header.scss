@@ -1,0 +1,44 @@
+/*------------------------------------------------------------------
+    Layout: Header
+-------------------------------------------------------------------*/
+
+.header {
+    $self: &;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: pxtorem(70) pxtorem(80);
+    align-items: center;
+    min-height: pxtorem(50);
+    box-sizing: content-box;
+
+    &__title {
+        display: none;
+    }
+
+    &__navigation {
+        margin-left: auto;
+    }
+
+    &--has-title {
+        #{ $self }__title {
+            display: block;
+        }
+    }
+
+    @media (max-width: 1240px) {
+        &__title {
+            display: block;
+        }
+    }
+
+    @media (max-width: 1100px) {
+        padding: 7.5%;
+    }
+}
+
+body.home-template .header {
+    &__title {
+        display: none;
+    }
+}

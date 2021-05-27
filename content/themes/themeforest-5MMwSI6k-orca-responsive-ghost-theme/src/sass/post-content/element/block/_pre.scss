@@ -1,0 +1,32 @@
+/**
+ *   Content - Element - Block - Pre
+ */
+
+& > pre {
+    margin: $content_spacing_large 0;
+}
+
+pre {
+    font-family: $font_code;
+    font-size: pxtorem(15);
+    -webkit-font-smoothing: auto;
+    padding: $content_spacing_large;
+    background: #000;
+    color: #fff;
+    border-radius: 3px;
+    line-height: pxtorem(32);
+    tab-size: 4;
+    font-weight: 600;
+    overflow: auto;
+
+    code {
+        background: transparent;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    @media screen and (max-width: 680px) {
+        padding: $content_spacing_medium;
+    }
+}

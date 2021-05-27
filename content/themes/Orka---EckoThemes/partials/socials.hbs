@@ -1,0 +1,26 @@
+{{! Partial: Social }}
+
+<section class="socials {{#if class}}{{class}}{{/if}}">
+    {{#if @site.twitter}}
+        <a href="{{twitter_url}}" class="socials__item socials__item--twitter" rel="noopener noreferrer" target="_blank" aria-label="Twitter">
+            {{> "svg-icon" icon="twitter" style="fill" class="socials__svg-icon"}}
+        </a>
+    {{/if}}
+    {{#if @site.facebook}}
+        <a href="{{facebook_url}}" class="socials__item socials__item--facebook" rel="noopener noreferrer" target="_blank" aria-label="Facebook">
+            {{> "svg-icon" icon="facebook" style="fill" class="socials__svg-icon"}}
+        </a>
+    {{/if}}
+    <a href="#" class="socials__item socials__item--instagram" rel="noopener noreferrer" target="_blank" aria-label="Instagram">
+        {{> "svg-icon" icon="instagram" style="fill" class="socials__svg-icon"}}
+    </a>
+    <a href="#" class="socials__item socials__item--github" rel="noopener noreferrer" target="_blank" aria-label="Github">
+        {{> "svg-icon" icon="github" style="fill" class="socials__svg-icon"}}
+    </a>
+    <a href="#" class="socials__item socials__item--linkedin" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn">
+        {{> "svg-icon" icon="linkedin" style="fill" class="socials__svg-icon"}}
+    </a>
+    <a href="{{@site.url}}/rss/" class="socials__item socials__item--rss" target="_blank" aria-label="RSS">
+        {{> "svg-icon" icon="rss" style="fill" class="socials__svg-icon"}}
+    </a>
+</section>

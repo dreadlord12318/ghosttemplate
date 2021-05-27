@@ -1,0 +1,72 @@
+/*------------------------------------------------------------------
+    Components: Widget - Subscribe
+-------------------------------------------------------------------*/
+
+.widget-subscribe {
+    $self: &;
+
+    &__header {
+        font-size: pxtorem(20);
+        font-weight: 600;
+        margin: 0 0 pxtorem(30);
+    }
+
+    &__description {
+        font-size: pxtorem(17);
+        line-height: pxtorem(34);
+        margin: 0 0 pxtorem(40);
+    }
+
+    &__form {
+        position: relative;
+
+        &.success {
+            #{ $self }__message--success {
+                display: block;
+            }
+
+            #{ $self }__input,
+            #{ $self }__button {
+                display: none;
+            }
+        }
+
+        &.error {
+            #{ $self }__message--error {
+                display: block;
+            }
+        }
+    }
+
+    &__input {
+        padding-right: pxtorem(100);
+    }
+
+    &__button {
+        position: absolute;
+        top: pxtorem(8);
+        right: pxtorem(8);
+    }
+
+    &__key {
+        position: absolute;
+        top: 100%;
+        user-select: none;
+        pointer-events: none;
+        color: transparent;
+    }
+
+    &__message {
+        font-size: pxtorem(16);
+        line-height: pxtorem(30);
+        display: none;
+        margin: pxtorem(30) 0 0;
+        color: #4b4f55;
+    }
+
+    &__primary {
+        font-weight: 500;
+        display: block;
+        color: #474747;
+    }
+}

@@ -1,0 +1,43 @@
+/*------------------------------------------------------------------
+    Base: Fonts
+-------------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+    src: local('DM Sans Regular'), local('DMSans-Regular'), url('{{asset "font/DMSans-Regular.woff2"}}') format('woff2');
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+    src: local('DM Sans Medium'), local('DMSans-Medium'), url('{{asset "font/DMSans-Medium.woff2"}}') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-style: normal;
+    font-display: block;
+    src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url('{{asset "font/Montserrat-SemiBold.woff2"}}') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-style: normal;
+    font-display: block;
+    src: local('Montserrat Bold'), local('Montserrat-Bold'), url('{{asset "font/Montserrat-Bold.woff2"}}') format('woff2');
+}
+
+@font-face {
+    font-family: 'PT Mono';
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+    src: local('PT Mono'), local('PTMono-Regular'), url('{{asset "font/PTMono-Regular.woff2"}}') format('woff2');
+}

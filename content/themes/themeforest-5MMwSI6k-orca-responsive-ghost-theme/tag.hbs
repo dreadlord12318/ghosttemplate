@@ -1,0 +1,34 @@
+{{! Template: Tag }}
+{{!< default}}
+
+{{#if tag.feature_image}}
+    {{> "cover" class="cover--tag" cover_image_url=tag.feature_image}}
+{{else}}
+    {{> "header"}}
+{{/if}}
+
+<div class="page page--sidebar page--padded {{#if tag.feature_image}}page--padded-cover{{/if}}">
+
+    <div class="page__inner">
+
+        <div class="page__content content">
+
+            <main class="main">
+
+                {{^if tag.feature_image}}
+                    {{> "tag-overview" class="content__tag-overview"}}
+                {{/if}}
+
+                {{> "feed" class="content__feed"}}
+
+            </main>
+
+            {{> "subscribe" class="content__subscribe"}}
+
+        </div>
+
+        {{> "sidebar-page" class="page__sidebar"}}
+
+    </div>
+
+</div>

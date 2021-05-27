@@ -1,0 +1,76 @@
+/*------------------------------------------------------------------
+    Components: Widget - Search
+-------------------------------------------------------------------*/
+
+.widget-search {
+    display: none;
+
+    &__inner {
+        position: relative;
+    }
+
+    &__input {
+        font-size: pxtorem(16);
+        width: 100%;
+        padding: pxtorem(26) pxtorem(31);
+        padding-left: pxtorem(65);
+        color: #535763;
+        border: 1px solid #e7e7e7;
+        border-radius: 3px;
+        cursor: text;
+    }
+
+    &__key {
+        position: absolute;
+        top: 100%;
+        user-select: none;
+        pointer-events: none;
+        color: transparent;
+    }
+
+    &__svg-icon {
+        position: absolute;
+        top: pxtorem(23);
+        left: pxtorem(23);
+        color: #D3D7DB;
+        pointer-events: none;
+    }
+
+    &__results {
+        margin-top: pxtorem(40);
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    &__result {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: pxtorem(25);
+        color: #0C0C0C;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:focus,
+        &:hover {
+            color: $color_accent;
+        }
+    }
+
+    &__category {
+        font-size: pxtorem(15);
+        font-weight: 500;
+        margin-bottom: pxtorem(10);
+        color: #5F6266;
+    }
+
+    &__title {
+        font-size: pxtorem(15);
+        line-height: 1.5;
+        font-family: $font_header;
+        font-weight: 400;
+    }
+}

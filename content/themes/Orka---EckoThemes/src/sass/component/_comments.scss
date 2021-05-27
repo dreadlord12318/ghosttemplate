@@ -1,0 +1,43 @@
+/*------------------------------------------------------------------
+    Components: Comments
+-------------------------------------------------------------------*/
+
+.comments {
+    $self: &;
+    display: none;
+
+    &__title {
+        display: flex;
+        padding: pxtorem(35) pxtorem(45);
+        cursor: pointer;
+        border-radius: 3px;
+        background: #f4f6f8;
+        align-items: center;
+
+        &:focus,
+        &:hover {
+            #{ $self }__svg-icon {
+                color: $color_accent;
+            }
+        }
+    }
+
+    &__label {
+        font-family: $font_header;
+        font-size: pxtorem(16);
+        font-weight: 600;
+        color: #1a1b1c;
+    }
+
+    &__svg-icon {
+        width: pxtorem(29);
+        height: pxtorem(29);
+        margin-right: pxtorem(25);
+        color: #919395;
+        transition: color 0.2s ease-out;
+    }
+
+    &__disqus {
+        color: $color_accent;
+    }
+}

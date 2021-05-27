@@ -1,0 +1,13 @@
+{{! Partial: Title }}
+
+<section class="title {{#if class}}{{class}}{{/if}}">
+    {{#if @site.logo}}
+        <a href="{{@site.url}}" class="title__anchor">
+            <img src="{{@site.logo}}" class="title__logo" alt="{{@site.title}}" loading="lazy" />
+        </a>
+    {{else}}
+        <h1 class="title__header">
+            <a href="{{@site.url}}" class="title__anchor">{{@site.title}}</a>
+        </h1>
+    {{/if}}
+</section>

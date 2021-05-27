@@ -1,0 +1,58 @@
+/*------------------------------------------------------------------
+    Components: Socials
+-------------------------------------------------------------------*/
+
+.socials {
+    $self: &;
+    display: flex;
+    flex-wrap: wrap;
+    margin: pxtorem(-7.5) pxtorem(-15);
+
+    &--color {
+        #{ $self }__item--twitter {
+            color: $color_social_twitter;
+        }
+
+        #{ $self }__item--facebook {
+            color: $color_social_facebook;
+        }
+
+        #{ $self }__item--instagram {
+            color: $color_social_instagram;
+        }
+
+        #{ $self }__item--github {
+            color: $color_social_github;
+        }
+
+        #{ $self }__item--linkedin {
+            color: $color_social_linkedin;
+        }
+
+        #{ $self }__item--rss {
+            color: $color_social_rss;
+        }
+    }
+
+    &__item {
+        margin: 0 pxtorem(7.5);
+        padding: pxtorem(7.5);
+        color: #D3D7DB;
+
+        &--instagram,
+        &--github,
+        &--linkedin {
+            display: none;
+        }
+
+        &:hover,
+        &:focus {
+            color: $color_accent;
+        }
+    }
+
+    &__svg-icon {
+        width: pxtorem(20);
+        height: pxtorem(20);
+    }
+}

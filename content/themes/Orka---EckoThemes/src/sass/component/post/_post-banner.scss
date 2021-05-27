@@ -1,0 +1,84 @@
+/*------------------------------------------------------------------
+    Components: Post - Banner
+-------------------------------------------------------------------*/
+
+.post-banner {
+    $self: &;
+    position: relative;
+    overflow: hidden;
+    height: max-content;
+    min-height: pxtorem(460);
+    border-radius: 3px;
+    background: #5f6266;
+    border-bottom: 0px;
+    border-bottom: 3px solid transparent;
+    transition: border 0.2s ease-out;
+
+    &:focus,
+    &:hover {
+        border-color: $color_accent;
+
+        #{ $self }__background {
+            background: #727272;
+        }
+    }
+
+    &__anchor {
+        position: absolute;
+        z-index: 200;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__gradient {
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        opacity: 0.6;
+        background-image: linear-gradient(-180deg, rgba(0,0,0, 0.1) 40%, #000 90%);
+        user-select: none;
+    }
+
+    &__background {
+        position: absolute;
+        z-index: 50;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #636363;
+        transition: background 0.2s ease-out;
+    }
+
+    &__background-image {
+        width: 100%;
+        height: 100%;
+
+        mix-blend-mode: overlay;
+        object-fit: cover;
+        user-select: none;
+        pointer-events: none;
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 150;
+        display: flex;
+        flex-direction: column;
+        min-height: pxtorem(460);
+        width: 100%;
+        height: 100%;
+        padding: pxtorem(120) pxtorem(50) pxtorem(50);
+
+        justify-content: flex-end;
+    }
+
+    &__post-category {
+        margin: 0 0 pxtorem(17);
+    }
+
+    &__post-title {
+        margin: 0;
+    }
+}

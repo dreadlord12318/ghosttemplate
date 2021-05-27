@@ -1,0 +1,32 @@
+/**
+ *   Content - Element - Block - Quote
+ */
+
+blockquote {
+    font-size: pxtorem(22);
+    font-weight: 500;
+    line-height: pxtorem(38);
+    margin: $content_spacing_medium 0 $content_spacing_medium $content_spacing_medium;
+    padding: $content_spacing_tiny $content_spacing_tiny $content_spacing_tiny $content_spacing_medium;
+    color: #3e3e3e;
+    border: 0 solid #f4f6f8;
+    border-left-width: 5px;
+
+    p {
+        font-size: pxtorem(22);
+        font-weight: 500;
+        line-height: pxtorem(38);
+        margin: 0;
+    }
+
+    cite {
+        font-size: pxto;
+        font-size: pxtorem(16);
+        font-weight: 400;
+        font-style: normal;
+        line-height: normal;
+        display: block;
+        margin-top: $content_spacing_small;
+        color: #686B6F;
+    }
+}

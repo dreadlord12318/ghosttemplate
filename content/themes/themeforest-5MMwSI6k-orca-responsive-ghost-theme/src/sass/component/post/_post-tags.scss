@@ -1,0 +1,16 @@
+/*------------------------------------------------------------------
+    Components: Post - Tags
+-------------------------------------------------------------------*/
+
+.post-tags {
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 pxtorem(-10) pxtorem(-20);
+    }
+
+    &__tag {
+        font-size: pxtorem(13);
+        margin: 0 pxtorem(10) pxtorem(20);
+    }
+}

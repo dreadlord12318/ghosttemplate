@@ -1,0 +1,77 @@
+/*------------------------------------------------------------------
+    Components: Plan
+-------------------------------------------------------------------*/
+
+.plan {
+    $self: &;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border: 1px solid #e8ecef;
+    border-radius: 3px;
+
+    &:hover,
+    &:focus {
+        border-color: #d3d7db;
+
+        #{ $self }__select {
+            background: $color_accent_dark;
+        }
+    }
+
+    &__title {
+        padding: pxtorem(25) pxtorem(35);
+        background: #fafbfc;
+    }
+
+    &__header {
+        font-size: pxtorem(22);
+        font-weight: 600;
+        margin: 0 0 pxtorem(5);
+    }
+
+    &__price {
+        font-size: pxtorem(17);
+        line-height: pxtorem(32);
+        color: #5f6266;
+    }
+
+    &__period {
+        font-size: 0.8em;
+    }
+
+    &__features {
+        margin: 0;
+        padding: pxtorem(35) pxtorem(35);
+        list-style: none;
+    }
+
+    &__feature {
+        font-size: pxtorem(16);
+        line-height: normal;
+        margin-bottom: pxtorem(20);
+        color: #5f6266;
+
+        &--empty {
+            color: #d3d7db;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__select {
+        font-family: $font_header;
+        font-size: pxtorem(15);
+        font-weight: 600;
+        display: block;
+        margin: pxtorem(5) pxtorem(30) pxtorem(30);
+        padding: pxtorem(18) 0;
+        text-align: center;
+        color: #fff;
+        border-radius: 3px;
+        background: $color_accent;
+        transition: background 0.2s ease-out;
+    }
+}

@@ -1,0 +1,37 @@
+/*------------------------------------------------------------------
+    Components: Post - Share
+-------------------------------------------------------------------*/
+
+.post-share {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__title {
+        font-weight: 500;
+        font-size: pxtorem(17);
+        color: #1A1B1C;
+        margin-right: pxtorem(35);
+        height: pxtorem(50);
+        display: flex;
+        align-items: center;
+    }
+
+    &__networks {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0 pxtorem(-10) pxtorem(-20);
+    }
+
+    &__network {
+        font-size: pxtorem(13);
+        margin: 0 pxtorem(10) pxtorem(20);
+    }
+
+    @media (max-width: 780px) {
+        &__title {
+            display: none;
+        }
+    }
+}

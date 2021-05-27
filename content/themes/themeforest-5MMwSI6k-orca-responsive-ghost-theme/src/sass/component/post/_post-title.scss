@@ -1,0 +1,29 @@
+/*------------------------------------------------------------------
+    Components: Post - Title
+-------------------------------------------------------------------*/
+
+.post-title {
+    font-size: pxtorem(38);
+    line-height: pxtorem(60);
+
+    &--light {
+        color: #fff;
+    }
+
+    &--large {
+        font-size: pxtorem(46);
+        letter-spacing: pxtorem(-0.2);
+        line-height: pxtorem(68);
+    }
+
+    &__anchor {
+        display: block;
+        text-decoration-color: transparent;
+
+        &:focus,
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: #e8ecef;
+        }
+    }
+}

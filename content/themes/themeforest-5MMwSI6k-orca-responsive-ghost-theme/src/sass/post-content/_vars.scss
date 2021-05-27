@@ -1,0 +1,24 @@
+/**
+ *   Content - Vars
+ */
+
+$content_container_width: 780px;
+$content_container_padding: 10%;
+
+$content_font_size_base: 1rem;
+$content_line_height_base: 2.15;
+
+$content_spacing_huge: pxtorem(80);
+$content_spacing_large: pxtorem(65);
+$content_spacing_medium: pxtorem(50);
+$content_spacing_base: pxtorem(40);
+$content_spacing_small: pxtorem(30);
+$content_spacing_tiny: pxtorem(20);
+
+$content_breakpoint_content_wide_large: $content_container_width + ($content_container_width * 0.4);
+$content_breakpoint_content_wide: $content_container_width + ($content_container_width * 0.25);
+$content_breakpoint_content: $content_container_width + ($content_container_width * (($content_container_padding / 100%) * 2.4));
+$content_breakpoint_alignment: $content_breakpoint_content;
+$content_breakpoint_tablet: 780px;
+$content_breakpoint_mobile_large: 540px;
+$content_breakpoint_mobile_small: 420px;

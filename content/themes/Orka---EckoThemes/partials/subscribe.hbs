@@ -1,0 +1,21 @@
+{{! Partial: Subscribe }}
+
+{{#if @labs.members}}
+    {{^if @member}}
+        <section class="subscribe {{#if class}}{{class}}{{/if}}">
+            <h3 class="subscribe__header">{{t "Subscribe to EckoThemes"}}</h3>
+            <p class="subscribe__description">{{t "Subscribe to {blogtitle} and receive access to exclusive posts and content updates. We don't spam and your email won't be shared with third-parties." blogtitle=@site.title}}</p>
+            <form class="subscribe__form" data-members-form="signup">
+                <label class="subscribe__label" for="email">
+                    <span class="subscribe__key">{{t "Email Address"}}</span>
+                    <input class="subscribe__input" name="email" type="email" placeholder="{{t "Type your email..."}}" required="true" data-members-email />
+                </label>
+                <button type="submit" class="subscribe__button button button--narrow" aria-label="{{t "Subscribe"}}">
+                    <span class="button__label">{{t "Subscribe"}}</span>
+                </button>
+                <p class="subscribe__message subscribe__message--success"><span class="subscribe__primary">{{t "Thanks for subscribing!"}}</span> {{t "Check your inbox to confirm your subscription."}}</p>
+                <p class="subscribe__message subscribe__message--error"><span class="subscribe__primary">{{t "Please enter a valid email address!"}}</span></p>
+            </form>
+        </section>
+    {{/if}}
+{{/if}}

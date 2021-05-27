@@ -1,0 +1,28 @@
+{{! Partial: Post - Meta }}
+
+<section class="post-meta {{#if class}}{{class}}{{/if}}">
+    <div class="post-meta__items">
+        <a href="{{primary_author.url}}" class="post-meta__item post-meta__item--author">
+            {{#if primary_author.profile_image}}
+                <picture class="post-meta__avatar">
+                    <img src="{{img_url primary_author.profile_image size="xs"}}" class="post-meta__image" alt="{{primary_author.name}}" loading="lazy" />
+                </picture>
+            {{/if}}
+            <span class="post-meta__label">{{primary_author.name}}</span>
+        </a>
+        <a href="{{url}}" class="post-meta__item post-meta__item--date">
+            {{> "svg-icon" icon="calendar" style="stroke" class="post-meta__svg-icon"}}
+            <span class="post-meta__label"><time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at format="MMMM Do, YYYY"}}</time></span>
+        </a>
+        <a href="{{url}}" class="post-meta__item post-meta__item--read-time">
+            {{> "svg-icon" icon="clock" style="stroke" class="post-meta__svg-icon"}}
+            <span class="post-meta__label">{{reading_time}}</span>
+        </a>
+        {{#if @labs.members}}
+            <a href="{{url}}" class="post-meta__item post-meta__item--premium post-meta__item--premium-{{visibility}}">
+                {{> "svg-icon" icon="bookmark" style="stroke" class="post-meta__svg-icon"}}
+                <span class="post-meta__label">{{t "Premium"}}</span>
+            </a>
+        {{/if}}
+    </div>
+</section>

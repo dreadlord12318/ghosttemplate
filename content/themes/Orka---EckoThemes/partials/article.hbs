@@ -1,0 +1,17 @@
+{{! Partial: Article }}
+
+<article class="article {{#if class}}{{class}}{{/if}}">
+    {{#if feature_image}}
+        {{> "post/post-banner" class="article__post-banner"}}
+    {{else}}
+        <div class="article__header">
+            {{> "post/post-category" class="article__post-category"}}
+            {{> "post/post-title" class="article__post-title"}}
+        </div>
+    {{/if}}
+    {{> "post/post-meta" class="article__post-meta"}}
+    {{> "post/post-excerpt" class="article__post-excerpt"}}
+    <a href="{{url}}" class="article__button button button--tall button--color-outline">
+        {{t "Continue Reading..."}}
+    </a>
+</article>

@@ -1,0 +1,59 @@
+/*------------------------------------------------------------------
+    Components: Tag Overview
+-------------------------------------------------------------------*/
+
+.tag-overview {
+    $self: &;
+
+    &--light {
+        #{ $self }__count {
+            color: #F4F6F8;
+            opacity: 0.8;
+        }
+
+        #{ $self }__title {
+            color: #F4F6F8;
+        }
+
+        #{ $self }__description {
+            color: #F4F6F8;
+            opacity: 0.8;
+        }
+    }
+
+    &--large {
+        #{ $self }__title {
+            font-size: pxtorem(52);
+            line-height: pxtorem(64);
+        }
+
+        #{ $self }__description {
+            font-size: pxtorem(20);
+            line-height: pxtorem(40);
+        }
+    }
+
+    &__count {
+        font-weight: 500;
+        font-size: pxtorem(18);
+        margin: 0 0 pxtorem(20);
+        color: #5F6266;
+    }
+
+    &__title {
+        font-size: pxtorem(40);
+        line-height: pxtorem(50);
+        margin: 0 0 pxtorem(30);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__description {
+        font-size: pxtorem(18);
+        line-height: pxtorem(36);
+        max-width: pxtorem(720);
+        margin: 0;
+    }
+}

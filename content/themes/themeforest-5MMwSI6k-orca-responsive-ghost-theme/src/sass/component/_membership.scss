@@ -1,0 +1,74 @@
+/*------------------------------------------------------------------
+    Components: Membership
+-------------------------------------------------------------------*/
+
+.membership {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__header {
+        margin: 0 0 pxtorem(40);
+    }
+
+    &__description {
+        max-width: pxtorem(710);
+        margin: 0 0 pxtorem(60);
+    }
+
+    &__plans {
+        display: grid;
+        width: 100%;
+        margin: 0;
+        gap: pxtorem(55);
+        grid-template-areas: 'monthly yearly';
+        grid-template-columns: repeat(2, 1fr);
+
+        .plan {
+            &--subscriber {
+                display: none;
+                grid-area: subscriber;
+            }
+
+            &--monthly {
+                grid-area: monthly;
+            }
+
+            &--yearly {
+                grid-area: yearly;
+            }
+        }
+
+        &--show-subscriber {
+            grid-template-areas: 'subscriber monthly yearly';
+            grid-template-columns: repeat(3, 1fr);
+
+            .plan--subscriber {
+                display: block;
+            }
+        }
+    }
+
+    @media (max-width: 1260px) {
+        &__plans {
+            &--show-subscriber {
+                grid-template-areas: 'monthly yearly'
+                'subscriber subscriber';
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+            }
+        }
+    }
+
+    @media (max-width: 840px) {
+        &__plans {
+            grid-auto-rows: repeat(3, 1fr);
+            grid-template-areas: 'monthly'
+            'yearly'
+            'subscriber';
+            grid-template-columns: 1fr;
+        }
+    }
+
+}

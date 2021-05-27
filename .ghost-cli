@@ -1,0 +1,9 @@
+{
+  "active-version": "3.42.4",
+  "cli-version": "1.16.0",
+  "channel": "stable",
+  "name": "localhost",
+  "previous-version": "3.41.9",
+  "node-version": "12.21.0",
+  "running": "production"
+}

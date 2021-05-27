@@ -1,0 +1,36 @@
+{{! Template: Index }}
+{{!< default}}
+
+{{#if @site.cover_image}}
+    {{> "cover" class="cover--index" cover_image_url=@site.cover_image}}
+{{else}}
+    {{> "header"}}
+{{/if}}
+
+<div class="page page--sidebar page--padded {{#if @site.cover_image}}page--padded-cover{{/if}}">
+
+    <div class="page__inner">
+
+        <div class="page__content content">
+
+            <main class="main">
+
+                {{#is "home"}}
+                    {{^if @site.cover_image}}
+                        {{> "blog-info" class="content__blog-info"}}
+                    {{/if}}
+                {{/is}}
+
+                {{> "feed" class="content__feed"}}
+
+            </main>
+
+            {{> "subscribe" class="content__subscribe"}}
+
+        </div>
+
+        {{> "sidebar-page" class="page__sidebar"}}
+
+    </div>
+
+</div>

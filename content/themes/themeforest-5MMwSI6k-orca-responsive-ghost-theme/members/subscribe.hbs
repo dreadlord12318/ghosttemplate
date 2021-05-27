@@ -1,0 +1,22 @@
+{{! Template: Members - Subscribe }}
+{{!< ../default}}
+
+{{> "header" class="header--has-title"}}
+
+<div class="page page--middle page--full-height page--narrow page--padded-slim">
+
+    <div class="page__inner">
+
+        <div class="content">
+
+            {{#if @member}}
+                <script>window.location = '{{@site.url}}/account/';</script>
+            {{else}}
+                {{> "authentication/authentication-subscribe"}}
+            {{/if}}
+
+        </div>
+
+    </div>
+
+</div>

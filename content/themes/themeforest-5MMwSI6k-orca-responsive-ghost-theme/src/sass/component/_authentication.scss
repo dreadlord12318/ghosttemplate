@@ -1,0 +1,92 @@
+/*------------------------------------------------------------------
+    Components: Authentication
+-------------------------------------------------------------------*/
+
+.authentication {
+    $self: &;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__header {
+        margin: 0 0 pxtorem(40);
+    }
+
+    &__description {
+        margin: 0 0 pxtorem(45);
+    }
+
+    &__form {
+        position: relative;
+        display: inline-block;
+        width: 90%;
+        max-width: 530px;
+
+        &.success {
+            #{ $self }__message--success {
+                display: block;
+            }
+
+            #{ $self }__input,
+            #{ $self }__button,
+            #{ $self }__footnote {
+                display: none;
+            }
+        }
+
+        &.error {
+            #{ $self }__message--error {
+                display: block;
+            }
+        }
+    }
+
+    &__input {
+        padding-right: pxtorem(205);
+    }
+
+    &__button {
+        position: absolute;
+        top: pxtorem(10);
+        right: pxtorem(10);
+        font-size: pxtorem(14);
+    }
+
+    &__key {
+        position: absolute;
+        top: 100%;
+        user-select: none;
+        pointer-events: none;
+        color: transparent;
+    }
+
+    &__message {
+        display: none;
+        font-size: pxtorem(17);
+        margin: 0;
+
+        &--error {
+            margin-top: pxtorem(35);
+        }
+    }
+
+    &__primary {
+        font-weight: 500;
+        display: block;
+        color: #474747;
+    }
+
+    &__footnote {
+        font-size: pxtorem(17);
+        margin: pxtorem(45) 0 0;
+        color: #686B6F;
+    }
+
+    &__anchor {
+        &:hover,
+        &:focus {
+            color: #474747;
+        }
+    }
+}

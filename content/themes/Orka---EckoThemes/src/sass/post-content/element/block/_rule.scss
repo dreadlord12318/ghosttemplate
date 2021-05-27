@@ -1,0 +1,16 @@
+/**
+ *   Content - Element - Block - Rule
+ */
+
+hr {
+    margin: $content_spacing_large auto;
+    height: 1px;
+    border: 0;
+    background: #E8ECEF;
+    width: 100%;
+
+    @media screen and (max-width: 680px) {
+        margin-top: $content_spacing_medium;
+        margin-bottom: $content_spacing_medium;
+    }
+}

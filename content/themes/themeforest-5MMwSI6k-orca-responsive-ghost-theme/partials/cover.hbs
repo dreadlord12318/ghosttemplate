@@ -1,0 +1,52 @@
+{{! Partial: Cover }}
+
+<section class="cover {{#if class}}{{class}}{{/if}}">
+    {{#if cover_image_url}}
+        <picture class="cover__background">
+            <img
+                class="cover__background-image"
+                srcset="{{img_url cover_image_url size="s"}} 350w,
+                    {{img_url cover_image_url size="m"}} 700w,
+                    {{img_url cover_image_url size="l"}} 1000w,
+                    {{img_url cover_image_url size="xxl"}} 1920w"
+                sizes="100vw"
+                src="{{img_url cover_image_url size="xxl"}}"
+                alt="{{t "Cover"}}"
+                loading="lazy"
+            />
+        </picture>
+    {{/if}}
+    <div class="cover__header">
+        <a href="{{@site.url}}" class="cover__home button button--icon-only button--narrow button--short" aria-label="{{t "Home"}}">
+            {{> "svg-icon" icon="home" style="stroke" class="button__svg-icon"}}
+        </a>
+        <div class="cover__navigation">
+            {{navigation type="primary" members="true" class="navigation--light"}}
+        </div>
+    </div>
+    <div class="cover__inner">
+        <div class="cover__content">
+            {{#is "index"}}
+                {{> "blog-info" class="cover__blog-info blog-info--light blog-info--large"}}
+            {{/is}}
+            {{#is "post"}}
+                {{#post}}
+                    {{> "post/post-category" class="cover__post-category post-category--large post-category--light post-category--mid-opacity"}}
+                    {{> "post/post-title" class="cover__post-title post-title--large post-title--light"}}
+                    {{> "post/post-meta" class="cover__post-meta post-meta--light"}}
+                {{/post}}
+            {{/is}}
+            {{#is "page"}}
+                {{#post}}
+                    {{> "post/post-title" class="cover__post-title post-title--large post-title--light"}}
+                {{/post}}
+            {{/is}}
+            {{#is "author"}}
+                {{> "author-profile" class="cover__author-profile author-profile--light author-profile--large"}}
+            {{/is}}
+            {{#is "tag"}}
+                {{> "tag-overview" class="cover__tag-overview tag-overview--light tag-overview--large"}}
+            {{/is}}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,12 @@
+{{! Partial: Feed }}
+
+<section class="feed {{#if class}}{{class}}{{/if}}">
+    <div class="feed__posts">
+        {{#foreach posts visibility="all"}}
+            {{> "article" class="feed__article"}}
+        {{/foreach}}
+    </div>
+    <div class="feed__pagination">
+        {{pagination class=""}}
+    </div>
+</section>

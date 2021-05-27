@@ -1,0 +1,21 @@
+{{! Partial: Post - Upgrade }}
+
+{{^if access}}
+    <section class="post-upgrade post-upgrade--{{visibility}} {{#if class}}{{class}}{{/if}}">
+        <div class="post-upgrade__members">
+            <div class="post-upgrade__content">
+                <h2 class="post-upgrade__header">{{t "Subscribers only"}}</h2>
+                <p class="post-upgrade__description">{{t "You don't have access to this post on {blogtitle} at the moment, but if you upgrade your account you'll be able to see the whole thing, as well as all the other posts in the archive!" blogtitle=@site.title}}</p>
+                <a class="post-upgrade__button button button--wide button--tall" href="/subscribe/">{{t "Become a Subscriber"}}</a>
+                <p class="post-upgrade__sign-in">{{t "Already have an account?"}} <a href="/signin/">{{t "Sign In"}}</a>.</p>
+            </div>
+        </div>
+        <div class="post-upgrade__paid">
+            <div class="post-upgrade__content">
+                <h2 class="post-upgrade__header">{{t "Members only"}}</h2>
+                <p class="post-upgrade__description">{{t "You don't have access to this post on {blogtitle} at the moment, but if you upgrade your account you'll be able to see the whole thing, as well as all the other posts in the archive!" blogtitle=@site.title}}</p>
+                <a class="post-upgrade__button button button--wide button--tall" href="/membership/">{{t "Become a Member"}}</a>
+            </div>
+        </div>
+    </section>
+{{/if}}

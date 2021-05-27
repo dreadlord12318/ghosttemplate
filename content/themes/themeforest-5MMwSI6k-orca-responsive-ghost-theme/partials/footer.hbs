@@ -1,0 +1,10 @@
+{{! Partial: Footer }}
+
+<footer class="footer">
+    {{#if @site.secondary_navigation}}
+        <div class="footer__navigation">
+            {{navigation type="secondary" members="false" class=""}}
+        </div>
+    {{/if}}
+    {{> "socials" class="footer__socials"}}
+</footer>

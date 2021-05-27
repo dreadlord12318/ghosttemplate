@@ -1,0 +1,46 @@
+/**
+ *   Content - Block - Heading
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: 1.4;
+    margin-top: $content_spacing_large;
+    margin-bottom: $content_spacing_medium;
+}
+
+h4,
+h5,
+h6 {
+    margin-top: $content_spacing_medium;
+    margin-bottom: $content_spacing_base;
+}
+
+h1 {
+    font-size: pxtorem(38);
+}
+
+h2 {
+    font-size: pxtorem(32);
+}
+
+h3 {
+    font-weight: 600;
+    font-size: pxtorem(28);
+}
+
+h4 {
+    font-weight: 600;
+    font-size: pxtorem(24);
+}
+
+h5,
+h6 {
+    font-weight: 600;
+    font-size: pxtorem(20);
+}

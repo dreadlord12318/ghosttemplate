@@ -1,0 +1,22 @@
+{{! Partial: Authentication - Sign In }}
+
+<section class="authentication">
+    <h1 class="authentication__header">{{t "Welcome Back!"}}</h1>
+    <p class="authentication__description">{{t "Sign into your account again for full access."}}</p>
+    <form class="authentication__form" data-members-form="singin">
+        <label class="authentication__label" for="email">
+            <span class="authentication__key">{{t "Email Address"}}</span>
+            <input class="authentication__input" name="email" type="email" placeholder="{{t "Type your email..."}}" required="true" data-members-email />
+        </label>
+        <button type="submit" class="authentication__button button button--narrow" aria-label="{{t "Sign In"}}">
+            <span class="button__label">{{t "Sign In"}}</span>
+        </button>
+        <p class="authentication__message authentication__message--success"><span class="authentication__primary">{{t "Check your inbox and click the link to complete signin."}}</span></p>
+        <p class="authentication__message authentication__message--error"><span class="authentication__primary">{{t "Please enter a valid email address!"}}</span></p>
+        {{#if price.monthly}}
+            <p class="authentication__footnote">{{t "Don't have an account yet?"}} <a href="/membership/" class="authentication__anchor">{{t "Become a Member."}}</a></p>
+        {{else}}
+            <p class="authentication__footnote">{{t "Don't have an account yet?"}} <a href="/subscribe/" class="authentication__anchor">{{t "Become a Subscriber."}}</a></p>
+        {{/if}}
+    </form>
+</section>

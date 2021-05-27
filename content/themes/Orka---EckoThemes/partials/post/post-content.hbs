@@ -1,0 +1,17 @@
+{{! Partial: Post - Content }}
+
+{{#if access}}
+    <section class="post-content {{#if class}}{{class}}{{/if}}">
+        {{content}}
+    </section>
+{{else}}
+    <section class="post-content {{#if class}}{{class}}{{/if}}">
+        <p>
+            {{#if custom_excerpt}}
+                {{excerpt}}
+            {{else}}
+                {{excerpt words="45"}}...
+            {{/if}}
+        </p>
+    </section>
+{{/if}}

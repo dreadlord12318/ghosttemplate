@@ -1,0 +1,11 @@
+{{! Partial: Comments }}
+
+<section class="comments {{#if class}}{{class}}{{/if}}">
+    <div class="comments__title js-comments-show">
+        {{> "svg-icon" icon="comment" style="stroke" class="comments__svg-icon"}}
+        <div class="comments__label">{{t "View Comments"}}</div>
+    </div>
+    <div class="comments__disqus">
+        <div id="disqus_thread"></div> {{!-- Disqus comments will be loaded into this container --}}
+    </div>
+</section>

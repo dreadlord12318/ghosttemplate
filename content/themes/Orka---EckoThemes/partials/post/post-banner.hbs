@@ -1,0 +1,13 @@
+{{! Partial: Post - Banner }}
+
+<section class="post-banner {{#if class}}{{class}}{{/if}}">
+    <a href="{{url}}" class="post-banner__anchor" aria-label="{{title}}"></a>
+    <picture class="post-banner__background">
+        <img src="{{img_url feature_image size="l"}}" class="post-banner__background-image" alt="{{title}}" loading="lazy" />
+    </picture>
+    <div class="post-banner__gradient"></div>
+    <div class="post-banner__inner">
+        {{> "post/post-category" class="post-banner__post-category post-category--light"}}
+        {{> "post/post-title" class="post-banner__post-title post-title--light"}}
+    </div>
+</section>

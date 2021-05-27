@@ -1,0 +1,48 @@
+{{! Template: Post }}
+{{!< default}}
+
+{{#if post.feature_image}}
+    {{> "cover" class="cover--post cover--tall" cover_image_url=post.feature_image}}
+{{else}}
+    {{> "header"}}
+{{/if}}
+
+<div class="page page--sidebar page--padded {{#if post.feature_image}}page--padded-cover{{/if}}">
+
+    <div class="page__inner">
+
+        <div class="page__content content">
+
+            {{#post}}
+                <main class="content__post post">
+
+                    {{^if feature_image}}
+
+                        {{> "post/post-category" class="post__post-category post-category--large"}}
+
+                        {{> "post/post-title" class="post__post-title post-title--large"}}
+
+                        {{> "post/post-meta" class="post__post-meta"}}
+
+                    {{/if}}
+
+                    {{> "post/post-content" class="post__post-content"}}
+
+                    {{> "post/post-upgrade" class="post__post-upgrade"}}
+
+                    {{> "post/post-footer" class="post__post-footer"}}
+
+                    {{> "comments" class="post__comments"}}
+
+                </main>
+            {{/post}}
+
+            {{> "subscribe" class="content__subscribe"}}
+
+        </div>
+
+        {{> "sidebar-post" class="page__sidebar"}}
+
+    </div>
+
+</div>

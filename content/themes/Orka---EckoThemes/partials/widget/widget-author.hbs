@@ -1,0 +1,43 @@
+{{! Partial: Widget - Author }}
+
+{{#post}}
+    {{#primary_author}}
+        <section class="widget widget-author">
+            {{#if profile_image}}
+                <picture class="widget-author__avatar">
+                    <img src="{{img_url profile_image size="xs"}}" class="widget-author__image" alt="{{name}}" loading="lazy" />
+                </picture>
+            {{/if}}
+            <div class="widget-author__title">
+                <h3 class="widget-author__name"><a href="{{url}}" class="widget-author__anchor">{{name}}</a></h3>
+                {{#if twitter}}
+                    <div class="widget-author__twitter"><a href="{{twitter_url}}" class="widget-author__anchor">{{twitter}}</a></div>
+                {{/if}}
+                <div class="widget-author__mark">{{t "Author"}}</div>
+            </div>
+            {{#if bio}}
+                <p class="widget-author__bio">{{bio}}</p>
+            {{/if}}
+            <div class="widget-author__socials">
+                {{#if website}}
+                    <a href="{{website}}" class="widget-author__social widget-author__social--website" rel="noopener noreferrer" target="_blank" aria-label="Website">
+                        {{> "svg-icon" icon="link" style="fill" class="widget-author__svg-icon"}}
+                    </a>
+                {{/if}}
+                {{#if twitter}}
+                    <a href="{{twitter_url}}" class="widget-author__social widget-author__social--twitter" rel="noopener noreferrer" target="_blank" aria-label="Twitter">
+                        {{> "svg-icon" icon="twitter" style="fill" class="widget-author__svg-icon"}}
+                    </a>
+                {{/if}}
+                {{#if facebook}}
+                    <a href="{{facebook_url}}" class="widget-author__social widget-author__social--facebook" rel="noopener noreferrer" target="_blank" aria-label="Facebook">
+                        {{> "svg-icon" icon="facebook" style="fill" class="widget-author__svg-icon"}}
+                    </a>
+                {{/if}}
+                <a href="{{@site.url}}/rss/" class="widget-author__social widget-author__social--rss" target="_blank" aria-label="RSS">
+                    {{> "svg-icon" icon="rss" style="fill" class="widget-author__svg-icon"}}
+                </a>
+            </div>
+        </section>
+    {{/primary_author}}
+{{/post}}

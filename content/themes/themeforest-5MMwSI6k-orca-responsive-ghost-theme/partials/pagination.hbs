@@ -1,0 +1,13 @@
+{{! Partial: Pagination }}
+
+<nav class="pagination {{#if class}}{{class}}{{/if}}" role="navigation">
+    <a href="{{page_url prev}}" class="pagination__button button button--icon-left button--hover-accent button--color-light-gray {{^if prev}}button--disabled{{/if}}" aria-label="{{t "Newer Posts"}}">
+        {{> "svg-icon" icon="arrow-left" style="stroke" class="button__svg-icon"}}
+        <span class="button__label">{{t "Newer Posts"}}</span>
+    </a>
+    <span class="pagination__page">{{page}} / {{pages}}</span>
+    <a href="{{page_url next}}" class="pagination__button button button--icon-right button--hover-accent button--color-light-gray {{^if next}}button--disabled{{/if}}" aria-label="{{t "Newer Posts"}}">
+        {{> "svg-icon" icon="arrow-right" style="stroke" class="button__svg-icon"}}
+        <span class="button__label">{{t "Older Posts"}}</span>
+    </a>
+</nav>

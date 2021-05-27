@@ -1,0 +1,23 @@
+/**
+ *   Content - Element - Block - Definition
+ */
+
+dl {
+    margin: $content_spacing_medium 0;
+    padding: 0;
+}
+
+dt {
+    font-family: $font_header;
+    font-weight: 600;
+    margin-bottom: $content_spacing_tiny;
+    padding: 0;
+    color: #1A1B1C;
+    font-size: pxtorem(18);
+}
+
+dd {
+    margin: 0 0 $content_spacing_base $content_spacing_small;
+    padding: 0 0 0 $content_spacing_small;
+    border-left: 2px solid #E8ECEF;
+}

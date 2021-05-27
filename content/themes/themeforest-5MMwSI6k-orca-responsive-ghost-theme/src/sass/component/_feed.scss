@@ -1,0 +1,33 @@
+/*------------------------------------------------------------------
+    Components: Feed
+-------------------------------------------------------------------*/
+
+.feed {
+    overflow: hidden;
+
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+
+    &__posts {
+        border-bottom: 1px solid #E8ECEF;
+        padding: 0 0 pxtorem(80);
+        margin: 0 0 pxtorem(80);
+    }
+
+    &__article {
+        margin: 0 0 pxtorem(80);
+        padding: 0 0 pxtorem(80);
+        border-bottom: 1px solid #E8ECEF;
+
+        &:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border: 0;
+        }
+    }
+
+    &__pagination {
+        margin: 0 0 pxtorem(80);
+    }
+}

@@ -1,0 +1,33 @@
+/*------------------------------------------------------------------
+    Components: Article
+-------------------------------------------------------------------*/
+
+.article {
+    &__post-banner {
+        margin: 0 0 pxtorem(55);
+    }
+
+    &__post-category {
+        margin: 0 0 pxtorem(30);
+    }
+
+    &__header {
+        margin: 0 0 pxtorem(40);
+    }
+
+    &__post-title {
+        margin: 0;
+    }
+
+    &__post-meta {
+        margin: 0 0 pxtorem(45);
+    }
+
+    &__post-excerpt {
+        margin: 0 0 pxtorem(50);
+    }
+
+    &__button {
+        font-size: pxtorem(12);
+    }
+}

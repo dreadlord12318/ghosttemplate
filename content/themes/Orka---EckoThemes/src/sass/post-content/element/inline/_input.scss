@@ -1,0 +1,127 @@
+/**
+ *   Content - Element - Inline - Input
+ */
+
+input,
+textarea,
+select,
+button {
+    margin: ($content_spacing_small / 2) 0 $content_spacing_small;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+input[type='email'],
+input[type='number'],
+input[type='search'],
+input[type='text'],
+input[type='tel'],
+input[type='url'],
+input[type='password'],
+input[type='time'],
+input[type='date'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='week'],
+input[type='color'],
+input[type='file'],
+textarea,
+select {
+    font-size: pxtorem(15);
+    line-height: 1;
+    display: block;
+    width: 100%;
+    padding: $content_spacing_tiny;
+    border-radius: 3px;
+    box-shadow: none;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+input[type='email'],
+input[type='number'],
+input[type='search'],
+input[type='text'],
+input[type='tel'],
+input[type='url'],
+input[type='password'],
+input[type='time'],
+input[type='date'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='week'],
+input[type='color'],
+textarea {
+    appearance: none;
+}
+
+input[type='search'] {
+    box-sizing: border-box;
+}
+
+input[type='color'] {
+    min-height: $content_spacing_medium;
+    padding: ($content_spacing_tiny / 4);
+}
+
+input[type='file'] {
+    line-height: 0;
+    height: auto;
+    padding: $content_spacing_tiny;
+}
+
+textarea {
+    min-height: ($content_spacing_large * 2);
+}
+
+select[size]:not([size='1']),
+select[multiple] {
+    height: auto;
+    text-indent: 0;
+    background: none;
+}
+
+label,
+legend {
+    font-family: $font_header;
+    font-size: pxtorem(16);
+    display: block;
+    color: #1a1b1c;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+    display: inline;
+    margin-right: ($content_spacing_tiny / 2);
+    vertical-align: -2px;
+}
+
+input[type='submit'],
+input[type='button'],
+input[type='reset'] {
+    font-family: $font_header;
+    font-size: pxtorem(16);
+    font-weight: 600;
+    line-height: normal;
+    display: inline-block;
+    width: auto;
+    padding: $content_spacing_tiny $content_spacing_large;
+    text-align: center;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    background: $color_accent;
+}
+
+input[type='submit'],
+input[type='button'] {
+    cursor: pointer;
+}
+
+textarea {
+    line-height: 2;
+}

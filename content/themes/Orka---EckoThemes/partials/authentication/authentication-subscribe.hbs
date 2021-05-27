@@ -1,0 +1,18 @@
+{{! Partial: Authentication - Subscribe }}
+
+<section class="authentication">
+    <h1 class="authentication__header">{{t "Subscribe to EckoThemes"}}</h1>
+    <p class="authentication__description">{{t "Subscribe to {blogtitle} and receive access to exclusive posts and content updates. We don't spam and your email won't be shared with third-parties." blogtitle=@site.title}}</p>
+    <form class="authentication__form" data-members-form="signup">
+        <label class="authentication__label" for="email">
+            <span class="authentication__key">{{t "Email Address"}}</span>
+            <input class="authentication__input" name="email" type="email" placeholder="{{t "Type your email..."}}" required="true" data-members-email />
+        </label>
+        <button type="submit" class="authentication__button button button--narrow" aria-label="{{t "Subscribe"}}">
+            <span class="button__label">{{t "Subscribe"}}</span>
+        </button>
+        <p class="authentication__message authentication__message--success"><span class="authentication__primary">{{t "Thanks for subscribing!"}}</span> {{t "Check your inbox to confirm your subscription."}}</p>
+        <p class="authentication__message authentication__message--error"><span class="authentication__primary">{{t "Please enter a valid email address!"}}</span></p>
+        <p class="authentication__footnote">{{t "Already a subscriber?"}} <a href="/signin/" class="authentication__anchor">{{t "Sign In"}}</a>.</p>
+    </form>
+</section>

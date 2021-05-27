@@ -1,0 +1,25 @@
+/*------------------------------------------------------------------
+    Components: Widget - Copyright
+-------------------------------------------------------------------*/
+
+.widget-copyright {
+    &__notice {
+        font-size: pxtorem(14);
+        font-weight: 500;
+        line-height: normal;
+        margin: 0 0 pxtorem(18);
+        color: #1a1b1c;
+    }
+
+    &__disclaimer {
+        font-size: pxtorem(13);
+        line-height: normal;
+        margin: 0;
+        color: #686B6F;
+    }
+
+    &__bull {
+        display: inline-block;
+        margin: 0 pxtorem(7);
+    }
+}

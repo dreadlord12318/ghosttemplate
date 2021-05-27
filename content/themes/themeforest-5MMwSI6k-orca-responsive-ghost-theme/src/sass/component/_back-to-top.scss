@@ -1,0 +1,35 @@
+/*------------------------------------------------------------------
+    Components: Back to Top
+-------------------------------------------------------------------*/
+
+.back-to-top {
+    position: fixed;
+    z-index: 50;
+    right: pxtorem(60);
+    bottom: pxtorem(60);
+    display: flex;
+    width: pxtorem(40);
+    height: pxtorem(40);
+    cursor: pointer;
+    color: #919395;
+    border-radius: 3px;
+    background: #f4f6f8;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease-out;
+
+    &:focus,
+    &:hover {
+        color: #fff;
+        background: $color_accent;
+    }
+
+    &__svg-icon {
+        width: pxtorem(16);
+        height: pxtorem(16);
+    }
+
+    @media (max-width: 1800px) {
+        display: none;
+    }
+}

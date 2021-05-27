@@ -1,0 +1,78 @@
+/*------------------------------------------------------------------
+    Components: Account
+-------------------------------------------------------------------*/
+
+.account {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    &__header {
+        margin: 0 0 pxtorem(40);
+    }
+
+    &__description {
+        max-width: pxtorem(710);
+        margin: 0 0 pxtorem(50);
+    }
+
+    &__button {
+        font-size: pxtorem(15);
+    }
+
+    &__details {
+        display: grid;
+        width: 100%;
+        margin-top: pxtorem(45);
+        gap: pxtorem(40) pxtorem(20);
+        grid-template-columns: repeat(4, 1fr);
+
+        @media (max-width: 860px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+    }
+
+    &__detail {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    &__label {
+        font-size: pxtorem(16);
+        font-weight: 500;
+        margin-bottom: pxtorem(15);
+        text-transform: capitalize;
+        color: #0c0c0c;
+    }
+
+    &__content {
+        font-size: pxtorem(17);
+        color: #5f6266;
+    }
+
+    &__cancel {
+        a {
+            font-family: $font_header;
+            font-size: pxtorem(13);
+            font-weight: 600;
+            display: inline-block;
+            margin-top: pxtorem(55);
+            padding: pxtorem(22) pxtorem(55);
+            text-transform: capitalize;
+            color: #0c0c0c;
+            border-radius: 3px;
+            background: #f4f6f8;
+
+            &:focus,
+            &:hover {
+                background: #e8ecef;
+            }
+        }
+    }
+}

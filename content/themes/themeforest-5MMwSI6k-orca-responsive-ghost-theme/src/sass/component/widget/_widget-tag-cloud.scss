@@ -1,0 +1,16 @@
+/*------------------------------------------------------------------
+    Components: Widget - Tag Cloud
+-------------------------------------------------------------------*/
+
+.widget-tag-cloud {
+    &__tags {
+        display: flex;
+        margin: pxtorem(-10);
+        flex-wrap: wrap;
+    }
+
+    &__tag {
+        font-size: pxtorem(12);
+        margin: pxtorem(10);
+    }
+}

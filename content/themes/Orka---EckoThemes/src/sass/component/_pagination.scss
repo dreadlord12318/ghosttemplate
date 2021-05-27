@@ -1,0 +1,35 @@
+/*------------------------------------------------------------------
+    Components: Pagination
+-------------------------------------------------------------------*/
+
+.pagination {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    &__page {
+        font-size: pxtorem(15);
+        color: #5f6266;
+    }
+
+    @media (max-width: 680px) {
+        &__page {
+            display: none;
+        }
+    }
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+
+        &__button {
+            width: 100%;
+            margin-bottom: pxtorem(30);
+            text-align: center;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

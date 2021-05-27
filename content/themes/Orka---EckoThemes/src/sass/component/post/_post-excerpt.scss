@@ -1,0 +1,15 @@
+/*------------------------------------------------------------------
+    Components: Post - Excerpt
+-------------------------------------------------------------------*/
+
+.post-excerpt {
+    &__paragraph {
+        font-size: pxtorem(17);
+        color: #5F6266;
+        margin: 0 0 pxtorem(40);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

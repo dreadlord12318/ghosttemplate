@@ -1,0 +1,27 @@
+{{! Partial: Widget - Related Posts }}
+
+{{#get "posts" limit="3" filter="tags:[{{post.tags}}]+id:-{{post.id}}+feature_image:-null" include="tags,authors"}}
+    {{#if posts}}
+        <section class="widget widget-related-posts">
+            {{#foreach posts visibility="all"}}
+                <a href="{{url}}" class="widget-related-posts__post">
+                    {{#if feature_image}}
+                        <picture class="widget-related-posts__background">
+                            <img src="{{img_url feature_image size="m"}}" class="widget-related-posts__background-image" alt="{{title}}" loading="lazy" />
+                        </picture>
+                    {{/if}}
+                    <div class="widget-related-posts__inner">
+                        <div class="widget-related-posts__mark">{{t "Related"}}</div>
+                        <div class="widget-related-posts__info">
+                            <h3 class="widget-related-posts__header">{{title}}</h3>
+                            <div class="widget-related-posts__metas">
+                                <div class="widget-related-posts__meta widget-related-posts__meta--tag">{{primary_tag.name}}</div>
+                                <div class="widget-related-posts__meta widget-related-posts__meta--date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at format="MMMM Do, YYYY"}}</time></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {{/foreach}}
+        </section>
+    {{/if}}
+{{/get}}

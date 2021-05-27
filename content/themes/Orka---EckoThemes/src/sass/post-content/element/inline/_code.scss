@@ -1,0 +1,26 @@
+/**
+ *   Content - Element - Inline - Code
+ */
+
+code,
+kbd,
+samp,
+var {
+    font-family: $font_code;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0 ($content_spacing_tiny / 4);
+    padding: 0 ($content_spacing_tiny / 2);
+    border-radius: 3px;
+    background: #f7f7f7;
+    -webkit-font-smoothing: auto;
+}
+
+p {
+    & > code,
+    & > kbd,
+    & > samp,
+    & > var {
+        font-size: pxtorem(14);
+    }
+}

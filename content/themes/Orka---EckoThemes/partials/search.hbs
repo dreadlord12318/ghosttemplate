@@ -1,0 +1,22 @@
+{{! Partial: Search }}
+
+<section class="search {{#if class}}{{class}}{{/if}}">
+    <div class="search__container">
+        <div class="search__field">
+            <div class="search__loading">
+                {{> "svg-icon" icon="loader" style="stroke" class="search__svg-icon"}}
+            </div>
+            <div class="search__magnify">
+                {{> "svg-icon" icon="search" style="stroke" class="search__svg-icon"}}
+            </div>
+            <input type="text" class="search__input" placeholder="{{t "Search..."}}">
+            <div class="search__close js-search-close">
+                {{> "svg-icon" icon="x" style="stroke" class="search__svg-icon"}}
+            </div>
+        </div>
+        <div class="search__lower">
+            <div class="search__header"><span class="search__count"></span> {{t "Results"}}</div>
+            <div class="search__results"></div>
+        </div>
+    </div>
+</section>

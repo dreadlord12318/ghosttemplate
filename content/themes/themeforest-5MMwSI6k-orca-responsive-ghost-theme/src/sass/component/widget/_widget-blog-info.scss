@@ -1,0 +1,26 @@
+/*------------------------------------------------------------------
+    Components: Widget - Blog Info
+-------------------------------------------------------------------*/
+
+.widget-blog-info {
+    &__logo {
+        max-height: pxtorem(60);
+    }
+
+    &__anchor {
+        display: inline-block;
+        margin: 0 0 pxtorem(40);
+    }
+
+    &__header {
+        margin: 0;
+        font-size: pxtorem(24);
+        font-weight: 600;
+    }
+
+    &__description {
+        font-size: pxtorem(18);
+        margin: 0;
+        color: #5f6266;
+    }
+}

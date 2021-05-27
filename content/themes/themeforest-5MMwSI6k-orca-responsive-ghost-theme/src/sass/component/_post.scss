@@ -1,0 +1,39 @@
+/*------------------------------------------------------------------
+    Components: Post
+-------------------------------------------------------------------*/
+
+.post {
+    &__post-category {
+        margin: 0 0 pxtorem(25);
+    }
+
+    &__post-title {
+        margin: 0 0 pxtorem(35);
+    }
+
+    &__post-meta {
+        margin: 0 0 pxtorem(45);
+    }
+
+    &__post-content {
+        margin: 0 0 pxtorem(80);
+    }
+
+    &__post-title + &__post-content,
+    &__post-meta + &__post-content {
+        margin-top: pxtorem(90);
+    }
+
+    &__post-upgrade {
+        margin: 0 0 pxtorem(90);
+    }
+
+    &__post-footer {
+        margin: pxtorem(90) 0 pxtorem(90);
+    }
+
+    &__comments {
+        border-top: 1px solid #e8ecef;
+        padding: pxtorem(90) 0 0;
+    }
+}

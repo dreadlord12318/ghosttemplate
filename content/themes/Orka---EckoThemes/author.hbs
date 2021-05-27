@@ -1,0 +1,40 @@
+{{! Template: Author }}
+{{!< default}}
+
+{{#author}}
+
+    {{#if cover_image}}
+        {{> "cover" class="cover--author" cover_image_url=cover_image}}
+    {{else}}
+        {{> "header"}}
+    {{/if}}
+
+    <div class="page page--sidebar page--padded {{#if cover_image}}page--padded-cover{{/if}}">
+
+{{/author}}
+
+    <div class="page__inner">
+
+        <div class="page__content content">
+
+            <main class="main">
+
+                {{#author}}
+                    {{^if cover_image}}
+                        {{> "author-profile" class="content__author-profile"}}
+                    {{/if}}
+                {{/author}}
+
+                {{> "feed" class="content__feed"}}
+
+            </main>
+
+            {{> "subscribe" class="content__subscribe"}}
+
+        </div>
+
+        {{> "sidebar-page" class="page__sidebar"}}
+
+    </div>
+
+</div>

@@ -1,0 +1,100 @@
+/**
+ *   Content - Element - Block - Table
+ */
+
+& > table {
+    margin: $content_spacing_large 0;
+}
+
+table {
+    font-weight: 400;
+    font-family: $font_body;
+    position: relative;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 2px;
+}
+
+thead {
+    @media (max-width: 1240px) {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: none;
+    }
+}
+
+tr {
+    height: $content_spacing_large;
+    font-size: pxtorem(16);
+
+    @media (max-width: 1240px) {
+        display: block;
+        height: auto;
+        margin-bottom: pxtorem(30);
+        border-bottom: 3px solid #ddd;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+th {
+    font-family: $font_header;
+    font-weight: 500;
+    font-size: pxtorem(14);
+    text-align: left;
+    color: #171718;
+    border-bottom: 2px solid #e7e7e7;
+    background: #f7f7f8;
+
+    &:first-child {
+        padding-left: $content_spacing_small;
+    }
+
+    &:last-child {
+        padding-right: $content_spacing_small;
+    }
+}
+
+td {
+    border: 0;
+    text-align: left;
+    color: #5F6266;
+    border-bottom: 1px solid #eee;
+    font-size: pxtorem(15);
+
+    &:first-child {
+        padding-left: $content_spacing_small;
+    }
+
+    &:last-child {
+        padding-right: $content_spacing_small;
+    }
+
+    @media (max-width: 1240px) {
+        display: block;
+        padding: pxtorem(10) 0;
+        text-align: right;
+        border-bottom: 1px solid #ddd;
+
+        &:before {
+            font-weight: 500;
+            float: left;
+            content: attr(data-label);
+        }
+
+        &:first-child {
+            padding: pxtorem(10) 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}

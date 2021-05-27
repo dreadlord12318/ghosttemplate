@@ -1,0 +1,52 @@
+{{! Partial: Account }}
+
+<section class="account">
+    <h1 class="account__header">{{t "My Account"}}</h1>
+    {{#if @member.paid}}
+        <div class="account__subscriptions">
+            {{#foreach @member.subscriptions}}
+                <div class="account__subscription">
+                    {{#if cancel_at_period_end}}
+                        <p class="account__description"><strong>{{t "Your subscription will expire on"}} {{date current_period_end format="DD MMM YYYY"}}.</strong> {{t "If you change your mind in the mean time you can turn auto-renew back on to continue your subscription."}}</p>
+                    {{else}}
+                        <p class="account__description">{{t "You have an active membership with access to all posts. Get in touch if have any problems or need some help getting things updated."}}</p>
+                    {{/if}}
+                    <div class="account__details">
+                        <div class="account__detail">
+                            <label class="account__label">{{t "Email address"}}</label>
+                            <span class="account__content">{{@member.email}}</span>
+                        </div>
+                        <div class="account__detail">
+                            <label class="account__label">{{t "Your plan"}}</label>
+                            <span class="account__content">{{plan.currency_symbol}}<span class="account__plan-price">{{price plan.amount}}</span> /{{plan.interval}}</span>
+                        </div>
+                        <div class="account__detail">
+                            <label class="account__label">{{t "Card"}}</label>
+                            <span class="account__content">**** **** **** {{default_payment_card_last4}}</span>
+                        </div>
+                        <div class="account__detail">
+                            <label class="account__label">
+                                {{#if cancel_at_period_end}}
+                                    {{t "Expires"}}
+                                {{else}}
+                                    {{t "Next bill date"}}
+                                {{/if}}
+                            </label>
+                            <span class="account__content">{{date current_period_end format="DD MMM YYYY"}}</span>
+                        </div>
+                    </div>
+                    <div class="account__cancel">
+                        {{cancel_link}}
+                    </div>
+                </div>
+            {{/foreach}}
+        </div>
+    {{else if @member}}
+        <p class="account__description">{{t "Hey there! {memberemail} is subscriber, but doesn't have a membership to unlock premium post access." memberemail=@member.email}}</p>
+        {{#if @price.monthly}}
+            <div class="account__subscribe">
+                <a class="account__button button" href="/membership/">{{t "Become a Member"}}</a>
+            </div>
+        {{/if}}
+    {{/if}}
+</section>

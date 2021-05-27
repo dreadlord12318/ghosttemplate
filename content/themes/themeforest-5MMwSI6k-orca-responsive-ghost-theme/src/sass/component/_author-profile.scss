@@ -1,0 +1,93 @@
+/*------------------------------------------------------------------
+    Components: Author Profile
+-------------------------------------------------------------------*/
+
+.author-profile {
+    $self: &;
+
+    &--light {
+        #{ $self }__avatar {
+            border: 3px solid #fff;
+        }
+
+        #{ $self }__description{
+            color: #F4F6F8;
+            opacity: 0.8;
+        }
+
+        #{ $self }__title {
+            color: #F4F6F8;
+        }
+
+        #{ $self }__social {
+            color: #d3d7db;
+
+            &:focus,
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    &--large {
+        #{ $self }__title {
+            font-size: pxtorem(52);
+            line-height: pxtorem(64);
+        }
+
+        #{ $self }__description {
+            font-size: pxtorem(20);
+            line-height: pxtorem(40);
+        }
+    }
+
+    &__avatar {
+        width: pxtorem(70);
+        height: pxtorem(70);
+        border-radius: pxtorem(140);
+        display: block;
+        overflow: hidden;
+        margin: 0 0 pxtorem(30);
+    }
+
+    &__avatar-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__title {
+        font-size: pxtorem(40);
+        line-height: pxtorem(50);
+        margin: 0 0 pxtorem(30);
+    }
+
+    &__description {
+        font-size: pxtorem(18);
+        line-height: pxtorem(36);
+        max-width: pxtorem(720);
+        margin: 0 0 pxtorem(30);
+    }
+
+    &__socials {
+        display: flex;
+        margin: pxtorem(-5) pxtorem(-10);
+        flex-wrap: wrap;
+    }
+
+    &__social {
+        margin: 0 pxtorem(5);
+        padding: pxtorem(5);
+        color: #BBC0C4;
+
+        &:focus,
+        &:hover {
+            color: #4B4F55;
+        }
+    }
+
+    &__svg-icon {
+        width: pxtorem(19);
+        height: pxtorem(19);
+    }
+}

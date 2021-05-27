@@ -1,0 +1,19 @@
+{{! Partial: Post - Tags }}
+
+{{#if tags}}
+    <section class="post-tags {{#if class}}{{class}}{{/if}}">
+        <div class="post-tags__tags">
+            {{#foreach tags}}
+                {{^if @index}}
+                    <a href="{{url}}" class="post-tags__tag post-tags__tag--primary post-tags__tag--slug-{{slug}} button button--short button--narrow">
+                        <span class="button__label">{{name}}</span>
+                    </a>
+                {{else}}
+                    <a href="{{url}}" class="post-tags__tag post-tags__tag--slug-{{slug}} button button--short button--short button--narrow button--color-light-gray">
+                        <span class="button__label">{{name}}</span>
+                    </a>
+                {{/if}}
+            {{/foreach}}
+        </div>
+    </section>
+{{/if}}

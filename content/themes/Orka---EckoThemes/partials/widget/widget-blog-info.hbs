@@ -1,0 +1,18 @@
+{{! Partial: Widget - Blog Info }}
+
+<section class="widget widget-blog-info">
+    <div class="widget-blog-info__title">
+        {{#if @site.logo}}
+            <a href="{{@site.url}}" class="widget-blog-info__anchor">
+                <img src="{{@site.logo}}" class="widget-blog-info__logo" alt="{{@site.title}}" loading="lazy" />
+            </a>
+        {{else}}
+            <h2 class="widget-blog-info__header">
+                <a href="{{@site.url}}" class="widget-blog-info__anchor">{{@site.title}}</a>
+            </h2>
+        {{/if}}
+    </div>
+    <p class="widget-blog-info__description">
+        {{@site.description}}
+    </p>
+</section>

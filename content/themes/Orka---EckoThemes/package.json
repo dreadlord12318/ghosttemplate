@@ -1,0 +1,71 @@
+{
+    "name": "ecko-orca-ghost",
+    "description": "Orca Theme for Ghost by EckoThemes.",
+    "version": "5.2.0",
+    "private": true,
+    "author": {
+        "name": "EckoThemes",
+        "email": "support@ecko.me"
+    },
+    "engines": {
+        "ghost": ">=3.8.0",
+        "ghost-api": "v3"
+    },
+    "config": {
+        "posts_per_page": 5,
+        "image_sizes": {
+            "xxs": {
+                "width": 50
+            },
+            "xs": {
+                "width": 175
+            },
+            "s": {
+                "width": 350
+            },
+            "m": {
+                "width": 700
+            },
+            "l": {
+                "width": 1000
+            },
+            "xl": {
+                "width": 1600
+            },
+            "xxl": {
+                "width": 1920
+            }
+        }
+    },
+    "keywords": [
+        "ghost-theme"
+    ],
+    "devDependencies": {
+        "@babel/core": "^7.5.5",
+        "@babel/preset-env": "^7.5.5",
+        "chalk": "^2.3.2",
+        "del": "^5.0.0",
+        "eslint": "^5.16.0",
+        "eslint-config-airbnb": "^17.1.1",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-react": "^7.14.2",
+        "gscan": "^3.1.1",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^6.1.0",
+        "gulp-babel": "^8.0.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-if": "^3.0.0",
+        "gulp-inject": "^5.0.3",
+        "gulp-livereload": "^4.0.1",
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "^4.0.2",
+        "gulp-svg-sprite": "^1.4.0",
+        "gulp-uglify": "^3.0.2",
+        "gulp-zip": "^5.0.0",
+        "lodash": "^4.17.5",
+        "remove-svg-properties": "^0.3.3",
+        "through2": "^3.0.1",
+        "gulp-svgmin": "^2.2.0"
+    }
+}

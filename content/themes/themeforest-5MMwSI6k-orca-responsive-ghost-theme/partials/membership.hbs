@@ -1,0 +1,54 @@
+{{! Partial: Membership }}
+
+<section class="membership">
+    <h1 class="membership__header">{{t "Membership"}}</h1>
+    <p class="membership__description">{{t "Become a {blogtitle} member and unlock full access to the entire library of members-only content & updates." blogtitle=@site.title}}</p>
+    <div class="membership__plans {{^if @member}}membership__plans--show-subscriber{{/if}}">
+        <a href="{{@site.url}}/subscribe/" class="membership__plan plan plan--subscriber">
+            <header class="plan__title">
+                <h3 class="plan__header">{{t "Subscriber"}}</h3>
+                <div class="plan__price">{{t "Free"}}</div>
+            </header>
+            <ul class="plan__features">
+                <li class="plan__feature">{{t "Access to subscriber posts"}}</li>
+                <li class="plan__feature">{{t "Regular updates with new content"}}</li>
+                <li class="plan__feature plan__feature--empty">—</li>
+                <li class="plan__feature plan__feature--empty">—</li>
+                <li class="plan__feature plan__feature--empty">—</li>
+            </ul>
+            <div class="plan__select">{{t "Continue"}}</div>
+        </a>
+        <a href="javascript:" data-members-plan="Monthly" class="membership__plan plan plan--monthly">
+            <div class="plan__inner">
+                <header class="plan__title">
+                    <h3 class="plan__header">{{t "Monthly"}}</h3>
+                    <div class="plan__price">{{@price.currency_symbol}}{{@price.monthly}} <span class="plan__period">/{{t "month"}}</span></div>
+                </header>
+                <ul class="plan__features">
+                    <li class="plan__feature">{{t "Full access to all premium posts"}}</li>
+                    <li class="plan__feature">{{t "Regular updates with new content"}}</li>
+                    <li class="plan__feature">{{t "Support independent publishing"}}</li>
+                    <li class="plan__feature">{{t "Simple, secure card payment"}}</li>
+                    <li class="plan__feature plan__feature--empty">—</li>
+                </ul>
+            </div>
+            <div class="plan__select">{{t "Continue"}}</div>
+        </a>
+        <a href="javascript:" data-members-plan="Yearly" class="membership__plan plan plan--yearly">
+            <div class="plan__inner">
+                <header class="plan__title">
+                    <h3 class="plan__header">{{t "Yearly"}}</h3>
+                    <div class="plan__price">{{@price.currency_symbol}}{{@price.yearly}} <span class="plan__period">/{{t "year"}}</span></div>
+                </header>
+                <ul class="plan__features">
+                    <li class="plan__feature">{{t "Full access to all premium posts"}}</li>
+                    <li class="plan__feature">{{t "Regular updates with new content"}}</li>
+                    <li class="plan__feature">{{t "Support independent publishing"}}</li>
+                    <li class="plan__feature">{{t "Simple, secure card payment"}}</li>
+                    <li class="plan__feature">{{t "One easy payment instead of 12"}}</li>
+                </ul>
+            </div>
+            <div class="plan__select">{{t "Continue"}}</div>
+        </a>
+    </div>
+</section>

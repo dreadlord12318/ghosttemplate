@@ -1,0 +1,61 @@
+/*------------------------------------------------------------------
+    Component: Post Upgrade
+-------------------------------------------------------------------*/
+
+.post-upgrade {
+    $self: &;
+    display: flex;
+    max-width: 120%;
+    padding: pxtorem(70);
+    text-align: center;
+    color: #535763;
+    border-radius: 3px;
+    background: #FAFBFC;
+    justify-content: center;
+
+    &--members {
+        #{ $self }__members {
+            display: block;
+        }
+    }
+
+    &--paid {
+        #{ $self }__paid {
+            display: block;
+        }
+    }
+
+    &__members,
+    &__paid {
+        display: none;
+    }
+
+    &__header {
+        font-size: pxtorem(30);
+        margin: 0 0 pxtorem(35);
+        text-transform: capitalize;
+    }
+
+    &__description {
+        font-size: pxtorem(18);
+        line-height: pxtorem(36);
+        width: 90%;
+        max-width: pxtorem(700);
+        margin: 0 auto pxtorem(40);
+    }
+
+    &__button {
+        font-size: pxtorem(15);
+        margin: 0 auto;
+    }
+
+    &__sign-in {
+        font-size: pxtorem(16);
+        margin: pxtorem(40) 0 0;
+        color: #7a7f91;
+    }
+
+    @media (max-width: 680px) {
+        padding: pxtorem(50);
+    }
+}

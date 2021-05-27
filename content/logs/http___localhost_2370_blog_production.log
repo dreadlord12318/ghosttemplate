@@ -1,0 +1,8 @@
+{"name":"Log","hostname":"lumi-staging-server","pid":4860,"level":30,"msg":"Ghost is running in production...","time":"2021-03-03T03:41:19.340Z","v":0}
+{"name":"Log","hostname":"lumi-staging-server","pid":4860,"level":30,"msg":"Your site is now available on http://localhost:2370/blog/","time":"2021-03-03T03:41:19.342Z","v":0}
+{"name":"Log","hostname":"lumi-staging-server","pid":4860,"level":30,"msg":"Ctrl+C to shut down","time":"2021-03-03T03:41:19.343Z","v":0}
+{"name":"Log","hostname":"lumi-staging-server","pid":4860,"level":30,"msg":"Ghost boot 4.199s","time":"2021-03-03T03:41:19.362Z","v":0}
+{"name":"Log","hostname":"lumi-staging-server","pid":4860,"level":30,"msg":"Bootstrap client was closed.","time":"2021-03-03T03:41:19.366Z","v":0}
+{"name":"Log","hostname":"lumi-staging-server","pid":4860,"level":40,"msg":"Ghost is shutting down","time":"2021-03-03T03:41:34.045Z","v":0}
+{"name":"Log","hostname":"lumi-staging-server","pid":4860,"level":40,"msg":"Ghost is shutting down","time":"2021-03-03T03:41:34.049Z","v":0}
+{"name":"Log","hostname":"lumi-staging-server","pid":4860,"level":40,"msg":"Ghost has shut down","time":"2021-03-03T03:41:34.053Z","v":0}

@@ -1,0 +1,23 @@
+/**
+ *   Content - Element - Block - Details
+ */
+
+details {
+    margin: $content_spacing_medium  0;
+
+    &[open] {
+        border-bottom: 1px solid #D8D8D8;
+    }
+
+    summary {
+        font-family: $font_header;
+        padding: $content_spacing_tiny $content_spacing_small;
+        border-radius: 3px;
+        line-height: 1.5;
+        border: 1px solid #D8D8D8;
+        outline: 0;
+        color: #1A1B1C;
+        cursor: pointer;
+        user-select: none;
+    }
+}

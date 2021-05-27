@@ -1,0 +1,59 @@
+{{! Partial: Navigation }}
+
+<nav class="navigation {{#if class}}{{class}}{{/if}} {{^if isSecondary}}navigation--dropdown{{/if}}">
+    <ul class="navigation__items" role="menu">
+        {{#foreach navigation}}
+            <li class="navigation__item navigation__item--{{slug}} {{#if current}}navigation__item--current{{/if}}" role="none">
+                <a href="{{url absolute="true"}}" class="navigation__anchor" role="menuitem">{{label}}</a>
+            </li>
+        {{/foreach}}
+        {{^if isSecondary}}
+            {{#if members}}
+                {{#if @labs.members}}
+                    <li class="navigation__item navigation__item--divider" role="none"></li>
+                    {{#if @member.paid}}
+                        <li class="navigation__item navigation__item--account" role="none">
+                            <a href="{{@site.url}}/account/" class="navigation__anchor" role="menuitem">{{t "My Account"}}</a>
+                        </li>
+                        <li class="navigation__item navigation__item--signout" role="none" data-members-signout>
+                            <a href="javascript:" class="navigation__anchor" role="menuitem">{{t "Sign Out"}}</a>
+                        </li>
+                    {{else if @member}}
+                        <li class="navigation__item navigation__item--account" role="none">
+                            <a href="{{@site.url}}/account/" class="navigation__anchor" role="menuitem">{{t "My Account"}}</a>
+                        </li>
+                        {{#if @price.monthly}}
+                            <li class="navigation__item navigation__item--membership" role="none">
+                                <a href="{{@site.url}}/membership/" class="navigation__anchor" role="menuitem">{{t "Membership"}}</a>
+                            </li>
+                        {{/if}}
+                        <li class="navigation__item navigation__item--signout" role="none" data-members-signout>
+                            <a href="javascript:" class="navigation__anchor" role="menuitem">{{t "Sign Out"}}</a>
+                        </li>
+                    {{else}}
+                        {{^if @price.monthly}}
+                            <li class="navigation__item navigation__item--subscribe" role="none">
+                                <a href="{{@site.url}}/subscribe/" class="navigation__anchor" role="menuitem">{{t "Subscribe"}}</a>
+                            </li>
+                        {{else}}
+                            <li class="navigation__item navigation__item--membership" role="none">
+                                <a href="{{@site.url}}/membership/" class="navigation__anchor" role="menuitem">{{t "Membership"}}</a>
+                            </li>
+                        {{/if}}
+                        <li class="navigation__item navigation__item--signin" role="none">
+                            <a href="{{@site.url}}/signin/" class="navigation__anchor" role="menuitem">{{t "Sign In"}}</a>
+                        </li>
+                    {{/if}}
+                {{/if}}
+            {{/if}}
+        {{/if}}
+    </ul>
+    {{^if isSecondary}}
+        <div class="navigation__search js-search-open">
+            {{> "svg-icon" icon="search" style="stroke" class="navigation__svg-icon navigation__svg-icon--search"}}
+        </div>
+    {{/if}}
+    <div class="navigation__toggle js-navigation-toggle">
+        {{> "svg-icon" icon="menu" style="stroke" class="navigation__svg-icon navigation__svg-icon--menu"}}
+    </div>
+</nav>

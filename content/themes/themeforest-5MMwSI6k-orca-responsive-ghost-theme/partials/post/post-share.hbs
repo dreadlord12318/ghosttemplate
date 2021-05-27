@@ -1,0 +1,23 @@
+{{! Partial: Post - Share }}
+
+<section class="post-share {{#if class}}{{class}}{{/if}}">
+    <div class="post-share__title">{{t "Share"}}:</div>
+    <div class="post-share__networks">
+        <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}" class="post-share__network post-share__network--twitter button button--short button--color-twitter button--icon-left button--narrow">
+            {{> "svg-icon" icon="twitter" style="fill" class="button__svg-icon"}}
+            <span class="button__label">Twitter</span>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" class="post-share__network post-share__network--facebook button button--short button--color-facebook button--icon-left button--narrow">
+            {{> "svg-icon" icon="facebook" style="fill" class="button__svg-icon"}}
+            <span class="button__label">Facebook</span>
+        </a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{url absolute="true"}}&amp;title={{encode title}}" class="post-share__network post-share__network--linkedin button button--short button--color-linkedin button--icon-left button--narrow">
+            {{> "svg-icon" icon="linkedin" style="fill" class="button__svg-icon"}}
+            <span class="button__label">LinkedIn</span>
+        </a>
+        <a href="mailto:?subject={{encode title}}&body={{url absolute="true"}}" class="post-share__network post-share__network--email button button--short button--color-email button--icon-left button--narrow">
+            {{> "svg-icon" icon="email" style="stroke" class="button__svg-icon"}}
+            <span class="button__label">{{t "Email"}}</span>
+        </a>
+    </div>
+</section>

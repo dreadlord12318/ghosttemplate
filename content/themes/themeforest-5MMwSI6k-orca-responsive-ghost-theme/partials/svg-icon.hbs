@@ -1,0 +1,5 @@
+{{! Partial: SVG Icon }}
+
+<svg class="svg-icon svg-icon--{{#if style}}{{style}}{{/if}} svg-icon--{{#if icon}}{{icon}}{{/if}} {{#if class}}{{class}}{{/if}}">
+    <use xlink:href="{{asset "svg/icons.svg"}}#{{#if class}}{{icon}}{{/if}}"></use>
+</svg>

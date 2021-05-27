@@ -1,0 +1,90 @@
+/*------------------------------------------------------------------
+    Base: Default
+-------------------------------------------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: $font_body;
+    font-size: 17px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media (max-width: 1240px) {
+        font-size: calc(13px + 0.30vw);
+    }
+
+    @media (max-width: 380px) {
+        font-size: 14px;
+    }
+}
+
+html,
+body {
+    min-height: 100vh;
+    margin: 0;
+    color: #000;
+    background: #fff;
+}
+
+a {
+    text-decoration: underline;
+    color: currentColor;
+    text-decoration-color: transparent;
+    @extend .transition;
+}
+
+strong {
+    font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font_header;
+    color: #0c0c0c;
+}
+
+h1 {
+    font-size: pxtorem(36);
+    line-height: pxtorem(54);
+}
+
+h2 {
+    font-size: pxtorem(28);
+    line-height: pxtorem(46);
+}
+
+h3 {
+    font-size: pxtorem(22);
+    line-height: pxtorem(36);
+}
+
+h4,
+h5,
+h6 {
+    font-size: pxtorem(18);
+    line-height: pxtorem(28);
+}
+
+p {
+    font-size: pxtorem(19);
+    line-height: pxtorem(36);
+    margin: pxtorem(36) 0;
+    letter-spacing: pxtorem(0.15);
+    color: #5f6266;
+}
+
+::selection {
+    background: #e5e7e9;
+}
+
+::-moz-selection {
+    background: #e5e7e9;
+}

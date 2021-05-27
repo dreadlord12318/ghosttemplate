@@ -1,0 +1,9 @@
+{{! Partial: Tag }}
+
+<section class="tag-overview {{#if class}}{{class}}{{/if}}">
+    <div class="tag-overview__count">{{pagination.total}} {{t "Articles"}}</div>
+    <h1 class="tag-overview__title">{{tag.name}}</h1>
+    {{#if tag.description}}
+        <p class="tag-overview__description">{{tag.description}}</p>
+    {{/if}}
+</section>

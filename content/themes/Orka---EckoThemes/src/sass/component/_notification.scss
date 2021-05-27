@@ -1,0 +1,95 @@
+/*------------------------------------------------------------------
+    Component: Notification
+-------------------------------------------------------------------*/
+
+.notification {
+    $self: &;
+    font-size: pxtorem(16);
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: height 0.75s ease-out;
+    transition-delay: 0.5s;
+    animation: 1s ease-out slideDown;
+    animation-delay: 0.5s;
+    color: #fff;
+    background: $color_accent;
+    pointer-events: none;
+    align-items: center;
+    animation-fill-mode: forwards;
+    justify-content: center;
+
+    &--active {
+        pointer-events: all;
+        height: pxtorem(80);
+    }
+
+    &--subscribe-success {
+        #{ $self }__message--subscribe {
+            opacity: 1;
+        }
+    }
+
+    &--signup-success {
+        #{ $self }__message--signup {
+            opacity: 1;
+        }
+    }
+
+    &--signin-success {
+        #{ $self }__message--signin {
+            opacity: 1;
+        }
+    }
+
+    &--checkout-success {
+        #{ $self }__message--checkout {
+            opacity: 1;
+        }
+    }
+
+    &:before,
+    &:after {
+        position: absolute;
+        top: pxtorem(29);
+        right: pxtorem(45);
+        width: pxtorem(2);
+        height: pxtorem(22);
+        content: '';
+        background-color: #fff;
+    }
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+    }
+
+    &__container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__message {
+        font-size: pxtorem(17);
+        position: absolute;
+        top: pxtorem(23);
+        display: block;
+        width: 100%;
+        margin: 0;
+        user-select: none;
+        transition: opacity 0.75s ease-out;
+        transition-delay: 0.8s;
+        text-align: center;
+        opacity: 0;
+        margin: 0;
+        color: #fff;
+    }
+}

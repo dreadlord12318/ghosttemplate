@@ -1,0 +1,90 @@
+/**
+ *   Content - Koenig - Bookmark
+ */
+
+.kg-bookmark-card {
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.kg-bookmark-container {
+    display: flex;
+    color: #364247;
+    border: 1px solid #e8ecef;
+    border-radius: 3px;
+    flex-wrap: wrap;
+
+    &:focus,
+    &:hover {
+        border-color: #bbc0c4;
+        text-decoration: transparent;
+    }
+}
+
+.kg-bookmark-content {
+    display: grid;
+    min-width: 50%;
+    padding: pxtorem(35);
+    flex-basis: 0;
+    flex-grow: 1000;
+}
+
+.kg-bookmark-title {
+    font-size: pxtorem(17);
+    font-weight: 500;
+    line-height: pxtorem(26);
+    color: #171818;
+}
+
+.kg-bookmark-description {
+    font-size: pxtorem(15);
+    font-weight: 400;
+    overflow: hidden;
+    min-width: 0;
+    margin-top: pxtorem(15);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #535763;
+}
+
+.kg-bookmark-metadata {
+    font-size: pxtorem(15);
+    display: flex;
+    margin-top: pxtorem(20);
+    color: #686B6F;
+    align-items: center;
+}
+
+.kg-bookmark-thumbnail {
+    flex-basis: 20rem;
+    flex-grow: 1;
+
+    img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        vertical-align: middle;
+        border-radius: 0;
+        object-fit: cover;
+    }
+}
+
+.kg-bookmark-icon {
+    width: pxtorem(20);
+    height: pxtorem(20);
+    margin: 0;
+    vertical-align: middle;
+}
+
+.kg-bookmark-author {
+    margin-left: pxtorem(12);
+}
+
+.kg-bookmark-publisher {
+    line-height: normal;
+
+    &:before {
+        margin: 0 pxtorem(12);
+        content: '-';
+    }
+}

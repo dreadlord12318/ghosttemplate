@@ -1,0 +1,11 @@
+{{! Partial: Post - Excerpt }}
+
+<section class="post-excerpt {{#if class}}{{class}}{{/if}}">
+    <p class="post-excerpt__paragraph">
+        {{#if custom_excerpt}}
+            {{custom_excerpt}}
+        {{else}}
+            {{excerpt words="62"}}...
+        {{/if}}
+    </p>
+</section>

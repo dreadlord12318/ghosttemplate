@@ -1,0 +1,10 @@
+{{! Partial: Blog Info }}
+
+<section class="blog-info {{#if class}}{{class}}{{/if}}">
+    {{#if @site.logo}}
+        <img src="{{@site.logo}}" class="blog-info__logo" alt="{{@site.title}}" loading="lazy" />
+    {{else}}
+        <h1 class="blog-info__title">{{@site.title}}</h1>
+    {{/if}}
+    <p class="blog-info__description">{{@site.description}}</p>
+</section>

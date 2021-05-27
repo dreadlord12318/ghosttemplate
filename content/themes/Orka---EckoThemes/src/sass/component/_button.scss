@@ -1,0 +1,180 @@
+/*------------------------------------------------------------------
+    Components: Button
+-------------------------------------------------------------------*/
+
+.button {
+    $self: &;
+    display: inline-grid;
+    font-family: $font_header;
+    background: $color_accent;
+    border-radius: 3px;
+    font-size: pxtorem(13);
+    color: #ffffff;
+    letter-spacing: pxtorem(0.25);
+    padding: 1.4em 3.5em;
+    grid-template-areas: "label";
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background: $color_accent_dark;
+    }
+
+    &--narrow {
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+    }
+
+    &--slim {
+        padding-left: 1.8em;
+        padding-right: 1.8em;
+    }
+
+    &--wide {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
+    &--short {
+        padding-top: 1.275em;
+        padding-bottom: 1.275em;
+    }
+
+    &--tall {
+        padding-top: 1.7em;
+        padding-bottom: 1.7em;
+    }
+
+    &--icon-left {
+        grid-template-areas: "icon label";
+
+        #{ $self }__label {
+            justify-self: right;
+        }
+
+        #{ $self }__svg-icon {
+            margin-right: 1.3em;
+        }
+    }
+
+    &--icon-right {
+        grid-template-areas: "label icon";
+
+        #{ $self }__label {
+            justify-self: left;
+        }
+
+        #{ $self }__svg-icon {
+            margin-left: 1.3em;
+            justify-self: right;
+        }
+    }
+
+    &--color-transparent {
+        background: transparent;
+        color: $color_accent;
+
+        &:hover,
+        &:focus {
+            background: #fafafd;
+            color: $color_accent_dark;
+        }
+    }
+
+    &--color-outline {
+        background: transparent;
+        border: 1px solid #E8ECEF;
+        color: #5F6266;
+
+        &:hover,
+        &:focus {
+            background: transparent;
+            border-color: #BBC0C4;
+            color: #1A1B1C;
+        }
+    }
+
+    &--color-light-gray {
+        background: #F4F6F8;
+        color: #4B4F55;
+
+        &:hover,
+        &:focus {
+            background: #F4F6F8;
+            color: #1A1B1C;
+        }
+
+        #{ $self }__svg-icon {
+            color: #919395;
+        }
+    }
+
+    &--color-twitter {
+        background: $color_social_twitter_dark;
+
+        &:focus,
+        &:hover {
+            background: darken($color_social_twitter_dark, 10);
+        }
+    }
+
+    &--color-facebook {
+        background: $color_social_facebook;
+
+        &:focus,
+        &:hover {
+            background: darken($color_social_facebook, 10);
+        }
+    }
+
+    &--color-linkedin {
+        background: $color_social_linkedin;
+
+        &:focus,
+        &:hover {
+            background: darken($color_social_linkedin, 10);
+        }
+    }
+
+    &--color-email {
+        background: $color_social_email;
+
+        &:focus,
+        &:hover {
+            background: darken($color_social_email, 10);
+        }
+    }
+
+    &--hover-accent {
+        &:focus,
+        &:hover {
+            background: $color_accent;
+            color: #fff;
+
+            #{ $self }__svg-icon {
+                color: #fff;
+            }
+        }
+    }
+
+    &--disabled {
+        opacity: 0.35;
+        border: 1px solid #E8ECEF;
+        pointer-events: none;
+        user-select: none;
+        background: transparent;
+    }
+
+    &__svg-icon {
+        grid-area: icon;
+        height: 1.5em;
+        width: 1.5em;
+    }
+
+    &__label {
+        grid-area: label;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

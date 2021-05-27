@@ -1,0 +1,13 @@
+/**
+ *   Content - Element - Inline - Anchor
+ */
+
+a {
+    color: $color_accent;
+    text-decoration-color: transparent;
+
+    &:focus,
+    &:hover {
+        text-decoration-color: $color_accent;
+    }
+}

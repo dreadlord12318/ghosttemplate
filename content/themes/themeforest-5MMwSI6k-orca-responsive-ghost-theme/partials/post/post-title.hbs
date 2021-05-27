@@ -1,0 +1,9 @@
+{{! Partial: Post - Title }}
+
+<h2 class="post-title {{#if class}}{{class}}{{/if}}">
+    {{#is "post, page"}}
+        {{title}}
+    {{else}}
+        <a href="{{url}}" class="post-title__anchor">{{title}}</a>
+    {{/is}}
+</h2>

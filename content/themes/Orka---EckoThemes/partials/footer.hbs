@@ -1,0 +1,16 @@
+{{! Partial: Footer }}
+
+<footer class="footer">
+    {{#if @site.secondary_navigation}}
+        <div class="footer__navigation">
+            {{navigation type="secondary" members="false" class=""}}
+        </div>
+    {{/if}}
+    {{> "socials" class="footer__socials"}}
+
+    <script>
+        $(window).on('load', function() {
+    setTimeout(function(){$("body").focus()}, 100);
+};
+    </script>
+</footer>
